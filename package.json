@@ -1,0 +1,19 @@
+{
+  "name": "@adinax031-boop/envcontract",
+  "version": "1.0.0",
+  "description": "Environment contracts with secret-safe diagnostics and zero dependencies",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "envcontract": "bin/envcontract.js" },
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" } },
+  "files": ["src", "bin", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "check": "node --check src/index.js && node --check bin/envcontract.js",
+    "prepack": "npm run check && npm test"
+  },
+  "repository": { "type": "git", "url": "https://github.com/adinax031-boop/envcontract.git" },
+  "keywords": ["environment", "dotenv", "validation", "configuration", "ci", "zero-dependency"]
+}
