@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "additionalProperties": false,
+  "variables": {
+    "NODE_ENV": { "type": "string", "enum": ["development", "test", "production"] },
+    "PORT": { "type": "integer", "min": 1, "max": 65535, "default": "3000" },
+    "API_URL": { "type": "url", "protocols": ["https:"] },
+    "API_TOKEN": { "type": "string", "minLength": 16 },
+    "DEBUG": { "type": "boolean", "default": "false" }
+  }
+}
+  
